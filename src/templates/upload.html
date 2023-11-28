@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% block titulo %}Banorte | Carga{% endblock %}
+{% block contenido %}
+    {% if success %}
+       <div class="form-cont">
+            <h2>Hemos recibido correctamente la documentación</h2>
+            <p>En breve nuestro equipo estará contactándose contigo al Email proporcionado</p>
+            <h3>¡Gracias!</h3>
+       </div>
+    {% else %}
+        {% if upload %}
+            <form action="/success" method="post" enctype="multipart/form-data">
+                <h3 class="upload-title">Acta Constitutiva</h3>
+                <input type="file" class="file" name="file" accept="application/pdf" required>
+                <div class="message"></div>
+                <!-- <h3 class="upload-title">Balance Contable</h3>
+                <input type="file" class="file" name="file" accept="application/pdf" required>
+                <div class="message"></div> -->
+                <h3 class="upload-title">Poder Especial</h3>
+                <input type="file" class="file" name="file" accept="application/pdf" required>
+                <div class="message"></div>
+                <input type="submit" id='final' value="Finalizar">
+            </form>
+        {% else %}
+            <div class="form-cont">
+                <h2>Cuéntanos de tu Empresa</h2>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" placeholder="Nombre" required>
+                    <label for="name">Email de Contacto</label>
+                    <input type="email" name="email" id="name" placeholder="Email" required>
+                    <label for="key">Número de Inscripción</label>
+                    <input type="text" name="key" id="key" placeholder="RFC" pattern=".{12,13}" required>
+                    <input type="submit" value="Continuar" class="btn-upload-continue">
+            </div>
+        {% endif %}
+    {% endif %}
+
+
+    <style>
+        /* .main-cont {
+            height: auto;
+        } */
+        .upload-title {
+            margin-bottom: -33px;
+            background-color: var(--main-color);
+            padding: 1rem;
+            color: var(--white);
+        }
+        .btn-upload-continue {
+            background-color: var(--bad);
+            color: var(--white);
+        }
+        .file {
+            background-color: #E5E7EB;
+            /* background-color: #ffc1cc; */
+            width: 600px;
+            height: 130px;
+            /* corta un poco la parte superior */
+            clip-path: inset(33px 0px 0px 0px);
+            margin-bottom: 20px;
+            border: 2px dashed var(--bad);
+            cursor: pointer;
+        }
+        
+        .file::before {
+            content: url('/static/img/cloud-arrow-up-me.svg');
+            position: relative;
+            opacity: 0.6;
+            top: 66px;
+            left: 39px;
+            z-index: 1;
+        }
+
+        .file::after {
+            content: 'Arrastra y suelta o haz click para seleccionar un archivo';
+            color: black;
+            position: relative;
+            font-size: 0.9rem;
+            font-weight: 600;
+            top: 60px;
+            left: -99px;
+        }
+
+        .message {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        #final {
+            display: none;
+            font-size: 1rem;
+            margin-top: 3rem;
+            width: 30%;
+            height: 50px;
+            background-color: var(--main-color);
+            color: var(--white);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        const files = document.querySelectorAll('.file');
+        const messages = document.querySelectorAll('.message');
+
+        // recorrer todos los elementos con un index
+        files.forEach((file, index) => {
+            // agregar un evento change a cada elemento
+            file.addEventListener('change', () => {
+                // loader
+                messages[index].style.color = 'var(--black)';
+                messages[index].innerHTML = 'Cargando...';
+
+
+                // enviar el archivo y el index al servidor
+                const formData = new FormData();
+                formData.append('file', file.files[0]);
+                formData.append('index', index);
+
+                fetch('/upload_file', {
+                    method: 'POST',
+                    body: formData
+                }).then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                }).then(data => {
+                    console.log(data);
+                    // mostrar el mensaje del json
+                    messages[index].innerHTML = data.message;
+                    if (data.status === 'ok') {
+                        messages[index].style.color = 'var(--ok)';
+                    } else {
+                        messages[index].style.color = 'var(--bad)';
+                    }
+                });
+            });
+        });
+
+
+        const button = document.querySelector('#final');
+
+        setInterval(() => {
+            if (messages[0].innerHTML.includes('correctamente') && messages[1].innerHTML.includes('correctamente')) {
+                button.style.display = 'block';
+            }
+            else {
+                button.style.display = 'none';
+            }
+        }, 1000);
+    </script>
+
+{% endblock %}

@@ -1,0 +1,403 @@
+{% extends 'base.html' %}
+{% block titulo %}Banorte | Revision{% endblock %}
+{% block contenido %}
+    <!--  boton para regresar a la ruta /system -->
+    <div class="review-wrapper">
+        <button class="back" onclick="window.location.href='/system/1'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+            </svg>
+        </button>
+
+        <div class="tb-user">{{ enterprise | safe }}</div>
+
+        <div class="tb-review">{{ review | safe }}</div>
+
+        <div class="tb-wrapper">
+            <div class="title-review-cont">
+            <div class="title-review">Acta Constitutiva</div>
+            <div class="final-time"></div>
+            </div>
+            <div class="table-container" id="tbac"></div>
+            <button class="btn-resultado">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg>
+                <spam>Resultado</spam>
+            </button>
+            <button class="btn-documento">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg>
+                <spam>Documento</spam>
+            </button>
+        </div>
+        <div class="loader stopwatch">. . .</div>
+        
+        <!-- <div class="tb-wrapper">
+            <div class="title-review-cont">
+            <div class="title-review">Balance Contable</div>
+            <div class="final-time"></div>
+            </div>
+            <div class="table-container" id="tbbc"></div>
+            <button class="btn-resultado">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg>
+                <spam>Resultado</spam>
+            </button>
+            <button class="btn-documento">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg>
+                <spam>Documento</spam>
+            </button>
+        </div>
+        <div class="loader stopwatch">. . .</div> -->
+        
+        <div class="tb-wrapper">
+            <div class="title-review-cont">
+            <div class="title-review">Poder Especial</div>
+            <div class="final-time"></div>
+            </div>
+            <div class="table-container" id="tbpe"></div>
+            <button class="btn-resultado">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg>
+                <spam>Resultado</spam>
+            </button>
+            <button class="btn-documento">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg>
+                <spam>Documento</spam>
+            </button>
+        </div>
+        <div class="loader stopwatch">. . .</div>
+        
+    </div>
+
+    <style>
+        .main-cont {
+            height: auto;
+        }
+
+        .review-wrapper {
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            box-sizing: border-box;
+            margin-top: 2em;
+            width: 100%;
+        }
+
+        /*  boton para regresar */
+        .back {
+            font-size: 1rem;
+            height: 2.6rem;
+            width: 2.6rem;
+            background-color: var(--main-color);
+            color: var(--white);
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 2em;
+        }
+
+        /* Tabla de usuario */
+
+        /* quitar las ultimas cuatro columnas */
+        .tb-user th:nth-last-child(-n+4),
+        .tb-user td:nth-last-child(-n+4) {
+            display: none;
+        }
+        .tb-user {
+            background-color: #E5E7EB;
+            color: var(--black);
+            width: 100%;
+            font-size: 1.1rem;
+            margin-bottom: 2em;
+            box-sizing: border-box;
+            padding: 2rem
+        }
+        .tb-user table {
+            text-align: left;
+            border-collapse: collapse;
+            width: 100%;
+            margin: auto;
+        }
+
+        
+        /* Tabla de analisis */
+        .tb-review {
+            margin-bottom: 2em;
+        }
+        .tb-review table {
+            text-align: left;
+            border-collapse: collapse;
+            width: 100%;
+            margin: auto;
+        }
+        .tb-review th {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .tb-review td {
+            padding: 0.5rem;
+            font-size: 1.1rem;
+            /* linea de abajo */
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* color solo a los botones de la segunda columna */
+        .analizar, .aceptar, .rechazar {
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            padding: 0.6rem;
+        }
+        /* --warning, --ok, --bad */
+        .analizar {
+            background-color: var(--warning);
+        }
+        .aceptar {
+            background-color: var(--ok);
+        }
+        .rechazar {
+            background-color: var(--bad);
+        }
+
+        /* quitar la segunda fila */
+        /* .tb-review tr:nth-child(2) {
+            display: none;
+        } */
+
+
+        /* contenido */
+
+        .tb-wrapper {
+            display: none;
+        }
+
+        .title-review-cont {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+
+        .title-review {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+
+        /* Tiempo Final */
+        .final-time {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--ok);
+            border: 2px solid var(--ok);
+            padding: 0.5rem 0.9rem;
+            margin-left: 52%;
+            /* animacion blinker solo tres veces */
+            animation: blinker 1s linear 3;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* tabla */
+        .table-container {
+            /* max-width: 700px;  */
+            margin: 2rem auto;
+            /*  */
+
+            /* font-size: 15.3px; */
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.6;
+            text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-font-smoothing: auto;
+            color: rgb(49, 51, 63);
+            /* font-family: "Source Sans Pro", sans-serif; */
+            font-family: "Source Sans 3", sans-serif;
+            box-sizing: border-box;
+            caption-side: bottom;
+            border-collapse: collapse;
+        }
+
+        .table-container table {
+        /* width: 100%; */
+        border-collapse: collapse;
+        }
+
+        .table-container th,
+        .table-container td {
+        padding: 6px 13.6px;
+        text-align: left;
+        border: 1px solid #d5d6d8;
+        }
+
+
+        /* stopwatch */
+        .stopwatch {
+            display: none;
+            text-align: center;
+            font-size: 1.5rem;
+            border: 2px solid var(--ok);
+            background-color: var(--white);
+            color: var(--ok);
+            padding: 0.5rem;
+            animation: appear 1s ease-out;
+        }
+
+        @keyframes appear {
+            0% {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stopwatch::before {
+            content: "Tiempo de análisis: ";
+        }
+
+        .btn-resultado, .btn-documento {
+            font-size: 1rem;
+            height: 2.6rem;
+            width: 9rem;
+            background-color: var(--main-color);
+            color: var(--white);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 3.6em;
+        }
+
+        .btn-resultado, .btn-documento svg {
+            margin-right: 0.5em;
+        }
+
+        
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+
+    <script>
+        var analyzers = document.querySelectorAll(".analizar");
+        var loaders = document.querySelectorAll(".loader");
+        var tbWrappers = document.querySelectorAll(".tb-wrapper");
+        var tables = document.querySelectorAll(".table-container");
+        var stopwatches = document.querySelectorAll(".stopwatch");
+        var finaltimes = document.querySelectorAll(".final-time");
+        var btnAccepts = document.querySelectorAll(".aceptar");
+
+        // recorrer todos los elementos con un index
+        analyzers.forEach(function(analyzer, index) {
+            // agregar un evento click a cada elemento
+            analyzer.addEventListener("click", function() {
+                // loader
+                tbWrappers[index].style.display = "none";
+                loaders[index].style.display = "block";
+                updatestopwatch(index);
+                // llamar al endpoint /analyze con el "id" (index del elemento)
+                fetch('/analyze/' + index, {
+                    method: 'GET'
+                }).then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                }).then(data => {
+                    loaders[index].style.display = "none";
+                    tbWrappers[index].style.display = "block";
+                    tables[index].innerHTML = data.table;
+                    restartstopwatch(index);
+                });
+            });
+        });
+
+        // stopwatch
+        var tiempo = 0;
+        var intervalo = 0;
+        var verificador = false;
+
+        function updatestopwatch(index) {
+            intervalo = setInterval(function() {
+                tiempo += 0.01;
+                stopwatches[index].innerHTML = tiempo.toFixed(2);
+            }, 10);
+        }
+
+        function restartstopwatch(index) {
+            clearInterval(intervalo);
+            finaltimes[index].innerHTML = tiempo.toFixed(2) + " segundos";
+            tiempo = 0;
+            stopwatches[index].innerHTML = tiempo + ".00";
+        }
+
+
+        // Cambiar el Texto del boton de aceptar a aceptado
+        btnAccepts.forEach(function(btnAccept, index) {
+            btnAccept.addEventListener("click", function() {
+                this.innerHTML = "Aceptado";
+            });
+        });
+
+
+        //  descargar Excel
+        var btnResultados = document.querySelectorAll(".btn-resultado");
+        function descargarExcel(button) {
+            var filename = "tabla.xlsx";
+            var tabla = button.previousElementSibling;
+            var wb = XLSX.utils.table_to_book(tabla);
+            XLSX.writeFile(wb, filename);
+        }
+
+        // descargar Documento PDF del backend
+        var btnDocumentos = document.querySelectorAll(".btn-documento");
+        btnDocumentos.forEach(function(btnDocumento, index) {
+            btnDocumento.addEventListener("click", function() {
+                fetch('/download/' + index, {
+                    method: 'GET'
+                }).then(response => {
+                    if (response.ok) {
+                        return response.blob();
+                    }
+                }).then(data => {
+                    var filename = "documento.pdf";
+                    var a = document.createElement("a");
+                    a.href = URL.createObjectURL(data);
+                    a.download = filename;
+                    a.click();
+                });
+            });
+        });
+
+        btnResultados.forEach(function(btnResultado, index) {
+            btnResultado.addEventListener("click", function() {
+                descargarExcel(this);
+            });
+        });
+
+    </script>
+{% endblock %}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}{% endblock %}</title>
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABD0lEQVR4AczOM6AQUBiA0Zs9Za65NdeSudeSbWvMmrKNPdu1ZNu2n+87y+P4PJxv+xFijPlSAha8Kd0KoCnj2cUVXvCJj7zkFodYRFcqBAmUYip3+MF/kvnIM36TRgqJ/OYd2zMWNOIlEYCjbOANMTeSMhZUYTnviBlYwAg+EQFI42CQDBVowxyOcYdedOceTzjBdlYygubZP2jLQBZykb3UoTPXeMQm+lOeQAjSgkVcJ4lIZCOl6cpTUnjGfgZTI2PBcWJuzCPQnSdEACZRPsg7IgCf6UOgOw+IZPjHaqoGGcB1fpFE5CAtCHTlLpFEfnCUVoQggSbM4wy/mEU1Ah04zVsOMZa66YPKDYLMBAC1shd0AT5ZXgAAAABJRU5ErkJggg==">
+    <style>
+        :root {
+        /* --main-color: #4263eb; */
+        --main-color: #EB0029;
+        --back: #F3F4F6;
+        --white: #ffffff;
+        --black: #000000;
+        --transparent: transparent;
+
+        --ok: #00a650;
+        --bad: #eb2c4c;
+        --warning: #f5a623;
+        --shadow: 0 6px 9px rgba(0, 0, 0, 0.256);
+        }
+
+        /* body {
+        background-color: var(--white);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        } */
+
+        /* styles.css */
+        body {
+            background-color: var(--back);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header, footer{
+            background-color: var(--main-color);
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+        header {
+            background-image: url("/static/img/header-detail.png");
+            background-repeat: repeat-x;
+            background-position: 12px -6px;
+        }
+        #logo-container img {
+            height: 50px;
+            margin-left: -390px;
+        }
+        /* h1 {
+            margin-left: -390px;
+        } */
+
+        footer {
+            margin-top: auto;
+            padding: 16px;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .mx-w-7 {
+            max-width: 60%;
+            line-height: 1.6;
+        }
+        
+        .main-cont {
+            /* max-width: 70%; */
+            width: 50%;
+            height: 100%;
+            margin: 0 auto;
+            /* background-color: rgba(0, 0, 255, 0.075); */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* -------------- por template -------------- */
+        .form-cont {
+            background-color: #ffc1cc; 
+            padding: 1em 2.4em;
+            border-radius: 8px; 
+            box-shadow: var(--shadow);
+            font-size: 1.1rem;
+            border: 2px solid rgb(236, 126, 126); /* Light border for the input */
+        }
+        .form-cont input {
+            font-size: 1.1rem;
+            width: 100%; /* Full width */
+            border: 1px solid #ccc; /* Light border for the input */
+            border-radius: 4px; /* Slightly rounded corners for the input */
+            padding: 0.5em;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+            <!-- <h1>BANORTE</h1> -->
+            <a href="/"><img src="/static/img/logo-banorte.png" alt=""></a>
+        </div>
+    </header>
+
+    <div class="main-cont">
+        {% block contenido %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <div class="mx-w-7">
+            <div class="flex items-center">
+                <a href="#" class="text-white mr-4">Términos Legales</a> |
+                <a href="#" class="text-white mr-4">Aviso de Privacidad</a> |
+                <a href="#" class="text-white">Consulta los costos y las comisiones de nuestros productos</a>
+            </div>
+            <div>2023 Grupo Financiero Banorte. Derechos reservados.</div>
+        </div>
+    </footer>
+</body>
+</html>

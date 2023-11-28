@@ -1,0 +1,262 @@
+<table>
+<thead>
+<tr>
+<th>Información</th>
+<th>Datos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Denominación social de la sociedad que otorga el poder</td>
+<td>ON TIME MOBILE TECHNOLOGIES, SOCIEDAD ANÓNIMA DE CAPITAL VARIABLE</td>
+</tr>
+<tr>
+<td>Representante de la sociedad</td>
+<td>Marcelo Clemente González</td>
+</tr>
+<tr>
+<td>número o constancia de inscripción del poder en un Registro Oficial</td>
+<td></td>
+</tr>
+<tr>
+<td>Número de Instrumento</td>
+<td>67,089</td>
+</tr>
+<tr>
+<td>Fecha de emisión del instrumento</td>
+<td>26 de junio de 2019</td>
+</tr>
+<tr>
+<td>Escribano interviniente</td>
+<td>Uriel Oliva Sanchez</td>
+</tr>
+<tr>
+<td>Nombre y Número de Notaria</td>
+<td>Notaría número 215 de la Ciudad de México</td>
+</tr>
+<tr>
+<td>Nombre y Apellido del firmante</td>
+<td>Marcelo Clemente González</td>
+</tr>
+<tr>
+<td>Carácter o rol del firmante</td>
+<td>Representante de la sociedad</td>
+</tr>
+<tr>
+<td>Artículo o cláusula de otorgamiento</td>
+<td>Artículo 2,554 del Código Civil para la Ciudad de México</td>
+</tr>
+<tr>
+<td>Nombre del Apoderado 1</td>
+<td>Fabián Andrés Berdiales</td>
+</tr>
+<tr>
+<td>Resumen de facultad A)</td>
+<td>Poder general para pleitos y cobranzas</td>
+</tr>
+<tr>
+<td>Resumen de facultad B)</td>
+<td>Poder general para actos de administración</td>
+</tr>
+<tr>
+<td>Resumen de facultad C)</td>
+<td>Poder general para emitir, girar, endosar, aceptar, avalar, descontar y suscribir toda clase de títulos de crédito</td>
+</tr>
+<tr>
+<td>Resumen de facultad D)</td>
+<td>Poder para abrir y cerrar cuentas bancarias en nombre y por cuenta de la sociedad</td>
+</tr>
+<tr>
+<td>Resumen de facultad E)</td>
+<td>Poder para actos de administración en materia laboral</td>
+</tr>
+<tr>
+<td>Resumen de facultad F)</td>
+<td>Facultad para designar al Director General, a los Gerentes, Sub-Gerentes y demás factores o empleados de la sociedad</td>
+</tr>
+<tr>
+<td>Persona Física o Jurídica</td>
+<td>Persona Física</td>
+</tr>
+<tr>
+<td>Número de Inscripción del RFC del Apoderado</td>
+<td></td>
+</tr>
+<tr>
+<td>Nacionalidad</td>
+<td>Argentino</td>
+</tr>
+<tr>
+<td>Rol del Apoderado</td>
+<td>Apoderado</td>
+</tr>
+<tr>
+<td>¿Tiene Poderes para Actos de Administración?</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>¿Tiene Poder para Actos de Dominio?</td>
+<td>No</td>
+</tr>
+<tr>
+<td>¿Tiene Poder para Títulos y Operaciones de Crédito?</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>¿Tiene Poder para delegar?</td>
+<td></td>
+</tr>
+<tr>
+<td>¿Tiene Poder especial para Cuentas Bancarias?</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>Fecha de Vigencia del Poder</td>
+<td></td>
+</tr>
+<tr>
+<td>Nombre del Apoderado 2</td>
+<td>Nabil Attar</td>
+</tr>
+<tr>
+<td>Resumen de facultad A)</td>
+<td>Poder general para pleitos y cobranzas</td>
+</tr>
+<tr>
+<td>Resumen de facultad B)</td>
+<td>Poder general para actos de administración</td>
+</tr>
+<tr>
+<td>Resumen de facultad C)</td>
+<td>Poder general para actos de dominio</td>
+</tr>
+<tr>
+<td>Resumen de facultad D)</td>
+<td>Poder general para emitir, girar, endosar, aceptar, avalar, descontar y suscribir toda clase de títulos de crédito</td>
+</tr>
+<tr>
+<td>Resumen de facultad E)</td>
+<td>Poder para abrir y cerrar cuentas bancarias en nombre y por cuenta de la sociedad</td>
+</tr>
+<tr>
+<td>Resumen de facultad F)</td>
+<td>Poder para actos de administración en materia laboral</td>
+</tr>
+<tr>
+<td>Persona Física o Jurídica</td>
+<td></td>
+</tr>
+<tr>
+<td>Número de Inscripción del RFC del Apoderado</td>
+<td></td>
+</tr>
+<tr>
+<td>Nacionalidad</td>
+<td></td>
+</tr>
+<tr>
+<td>Rol del Apoderado</td>
+<td>Apoderado</td>
+</tr>
+<tr>
+<td>¿Tiene Poderes para Actos de Administración?</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>¿Tiene Poder para Actos de Dominio?</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>¿Tiene Poder para Títulos y Operaciones de Crédito?</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>¿Tiene Poder para delegar?</td>
+<td></td>
+</tr>
+<tr>
+<td>¿Tiene Poder especial para Cuentas Bancarias?</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>Fecha de Vigencia del Poder</td>
+<td></td>
+</tr>
+<tr>
+<td>Nombre del Apoderado 3</td>
+<td></td>
+</tr>
+<tr>
+<td>Resumen de facultad A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Resumen de facultad B)</td>
+<td></td>
+</tr>
+<tr>
+<td>Resumen de facultad C)</td>
+<td></td>
+</tr>
+<tr>
+<td>Resumen de facultad D)</td>
+<td></td>
+</tr>
+<tr>
+<td>Resumen de facultad E)</td>
+<td></td>
+</tr>
+<tr>
+<td>Resumen de facultad F)</td>
+<td></td>
+</tr>
+<tr>
+<td>Persona Física o Jurídica</td>
+<td></td>
+</tr>
+<tr>
+<td>Número de Inscripción del RFC del Apoderado</td>
+<td></td>
+</tr>
+<tr>
+<td>Nacionalidad</td>
+<td></td>
+</tr>
+<tr>
+<td>Rol del Apoderado</td>
+<td></td>
+</tr>
+<tr>
+<td>¿Tiene Poderes para Actos de Administración?</td>
+<td></td>
+</tr>
+<tr>
+<td>¿Tiene Poder para Actos de Dominio?</td>
+<td></td>
+</tr>
+<tr>
+<td>¿Tiene Poder para Títulos y Operaciones de Crédito?</td>
+<td></td>
+</tr>
+<tr>
+<td>¿Tiene Poder para delegar?</td>
+<td></td>
+</tr>
+<tr>
+<td>¿Tiene Poder especial para Cuentas Bancarias?</td>
+<td></td>
+</tr>
+<tr>
+<td>Fecha de Vigencia del Poder</td>
+<td></td>
+</tr>
+<tr>
+<td>¿Dónde podrán ejercitarse las facultades?</td>
+<td>En el sector público (dependencias de gobierno) así como privado, incluyendose entre estos, la Secretaría de Hacienda y Crédito Público y su Servicio de Administración Tributaria, el Instituto Mexicano del Seguro Social y cualquier dependencia que pertenezca a éste y el Instituto Nacional de Migración</td>
+</tr>
+<tr>
+<td>¿De qué manera actúan los apoderados? (Individual, conjunta, indistinta)</td>
+<td>Conjunta o separadamente</td>
+</tr>
+</tbody>
+</table>

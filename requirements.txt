@@ -1,0 +1,6 @@
+boto3==1.28.60
+flask==3.0.0
+gunicorn==21.2.0
+Markdown==3.4.4
+python-dotenv==1.0.0
+openai==0.28.1

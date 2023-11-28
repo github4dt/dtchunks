@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block titulo %}Banorte | Bienvenido{% endblock %}
+{% block contenido %}
+    <div class="form-cont code">
+        <h2>Bienvenido</h2>
+        <p>Porfavor completa el código de carga proporcionado</p>
+        <form action="/info" method="post">
+            <input type="text" name="code" id="code" placeholder="Código de carga" required>
+            <!-- <input type="submit" value="Enviar"> -->
+
+        {% if error %}
+            <p class="code-error">EL codigo no es valido</p>
+        {% endif %}
+    </div>
+
+    <style>
+        .code-error {
+            color: var(--bad);
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
+    <script>
+        const codeError = document.querySelector('.code-error');
+
+        if (codeError) {
+            setTimeout(() => {
+                codeError.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% block titulo %}Banorte | Sistema{% endblock %}
+{% block contenido %}
+    <div class="info">
+        <h4>Sistema de recepción de documentos</h4>
+        <div class="employee-info">
+            <h4>{{ employee.name }}</h4>
+            <img src={{ employee.image }} alt="">
+        </div>
+    </div>
+    <div class="table" id="table-enterprises">{{ enterprises | safe }}</div>
+    <style>
+        /* Barra de información */
+        .info {
+            background-color: var(--main-color);
+            color: var(--white);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2em;
+            box-sizing: border-box;
+            padding: 0 1em;
+        }
+        .employee-info {
+            display: flex;
+            align-items: center;
+        }
+        .info img {
+            width: 36px;
+            height: 36px;
+            margin-left: 1em;
+            border-radius: 50%;
+        }
+
+
+
+        /* Tabla de empresas */
+        #table-enterprises table {
+            width: 100%;
+            height: 100%; /* creo qu no va */
+            border-collapse: collapse;
+            margin: 0 auto; /* creo qu no va */
+            background-color: var(--white);
+            color: gray;
+            box-shadow: var(--shadow);
+            table-layout: fixed;
+            text-align: center;
+        }
+
+        #table-enterprises thead {
+            background-color: var(--main-color);
+            color: white;
+            text-transform: uppercase;
+            height: 60px;
+            font-size: 0.9rem;
+        }
+        /* Titulo de la columna 1 a la 3 */
+        #table-enterprises th:nth-child(-n+3) {
+            text-align: left;
+        }
+        #table-enterprises th:first-child {
+            padding-left: 20px;
+        }
+
+        /* ocultar el texto que sale de las columnas */
+        #table-enterprises td {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        /* Filas de la segunda columna a la izquierda */
+        #table-enterprises td:nth-child(2) {
+            text-align: left;
+        }
+        /* mas altura para las filas */
+        #table-enterprises td,
+        #table-enterprises th {
+            height: 36px;
+        }
+
+        /* seleccionar solo las cuatro ultimas columnas */
+        #table-enterprises td:nth-last-child(-n+4) {
+            color: var(--ok);
+            /* font-weight: bold; */
+        }
+        /* seleccionar solo las cuatro primeras columnas de la primera fila */
+        #table-enterprises tr:first-child td:nth-last-child(-n+4) {
+            color: var(--warning);
+        }
+        /* quitar la ante penultima columna */
+        #table-enterprises th:nth-last-child(3),
+        #table-enterprises td:nth-last-child(3) {
+            display: none;
+        }
+    </style>
+
+    {% if back %}
+        <style>
+            /* seleccionar solo las cuatro primeras columnas de la primera fila */
+            #table-enterprises tr:first-child td:nth-last-child(-n+4) {
+                color: var(--ok);
+            }
+        </style>
+    {% endif %}
+
+{% endblock %}
