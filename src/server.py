@@ -396,7 +396,7 @@ def info():
     code = request.form['code']
     print(code)
     
-    if code == '.des':
+    if code == '987654':
         return render_template('upload.html')
     else:
         return render_template('code.html', error=True)
