@@ -19,8 +19,8 @@
                 <h3 class="upload-title">Poder Especial</h3>
                 <input type="file" class="file" name="file" accept="application/pdf" required>
                 <div class="message"></div>
-                <input type="submit" id='final' value="Finalizar">
             </form>
+            <button id="final" onclick="window.location.href='/success'">Finalizar</button>
         {% else %}
             <div class="form-cont">
                 <h2>Cuéntanos de tu Empresa</h2>
@@ -33,6 +33,7 @@
                     <input type="text" name="key" id="key" placeholder="RFC" pattern=".{12,13}" required>
                     <input type="submit" value="Continuar" class="btn-upload-continue">
             </div>
+            
         {% endif %}
     {% endif %}
 
